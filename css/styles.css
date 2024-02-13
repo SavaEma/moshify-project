@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -135,6 +141,58 @@ a {
 }
 .icon--primary {
   fill: #2584ff;
+}
+
+.btn {
+  border: none;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 2rem 3rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn--outline {
+  background-color: #fff;
+  color: #1b0760;
+  border: 2px solid #1b0760;
+}
+.btn--outline:hover {
+  background-color: #1b0760;
+  color: #fff;
+}
+.btn--primary {
+  background: #2584ff;
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: #3f92ff;
+}
+.btn--secondary {
+  background: #00d9ff;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background-color: #4de4ff;
+}
+.btn--accent {
+  background: #ff3400;
+  color: #fff;
+}
+.btn--accent:hover {
+  background-color: #f03100;
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

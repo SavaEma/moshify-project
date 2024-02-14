@@ -212,4 +212,18 @@ a {
   }
 }
 
+.input-group {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  display: flex;
+}
+.input-group .input {
+  border: none;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+.input-group .btn {
+  margin: 4px;
+}
+
 /*# sourceMappingURL=styles.css.map */

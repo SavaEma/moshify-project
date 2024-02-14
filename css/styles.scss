@@ -12,6 +12,7 @@ $colors: (
   "accent": #ff3400,
   "headings": #1b0760,
   "body": #918ca4,
+  "border": #ccc,
 );
 
 @mixin media-min-width($width) {
@@ -255,7 +256,7 @@ a {
 
 .input {
   padding: 1.5rem 3.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid map-get($colors, border);
   border-radius: 30px;
   outline: 0;
   color: map-get($colors, headings);
@@ -269,5 +270,21 @@ a {
     & {
       font-size: 1.5rem;
     }
+  }
+}
+
+.input-group {
+  border: 1px solid map-get($colors, border);
+  border-radius: 30px;
+  display: flex;
+
+  .input {
+    border: none;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    margin: 4px;
   }
 }

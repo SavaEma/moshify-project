@@ -288,3 +288,30 @@ a {
     margin: 4px;
   }
 }
+
+// CARDS
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+
+  &__header,
+  &__body {
+    padding: 2rem 3rem;
+  }
+
+  &--primary {
+    .card__header {
+      background-color: map-get($colors, primary);
+      color: #fff;
+    }
+  }
+
+  &--secondary {
+    .card__header {
+      background-color: map-get($colors, secondary);
+      color: #fff;
+    }
+  }
+}

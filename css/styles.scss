@@ -125,6 +125,7 @@ a {
 
   &--small {
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
   }
 
   @include media-min-width(1024px) {
@@ -312,6 +313,60 @@ a {
     .card__header {
       background-color: map-get($colors, secondary);
       color: #fff;
+    }
+    & .badge--secondary {
+      background-color: darken(map-get($colors, secondary), 4%);
+    }
+  }
+}
+
+// PLANS
+
+.plan {
+  &__name {
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  &__price {
+    font-size: 6rem;
+  }
+
+  &__billing-cycle {
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-right: 1rem;
+  }
+
+  &__description {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  & .list__item {
+    margin-bottom: 2rem;
+  }
+
+  @include media-min-width(1024px) {
+    &__name {
+      font-size: 1.4rem;
+    }
+
+    &__price {
+      font-size: 5rem;
+    }
+
+    &__billing-cycle {
+      font-size: 1.6rem;
+    }
+
+    &__description {
+      font-size: 1.7rem;
     }
   }
 }

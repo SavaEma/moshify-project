@@ -12,6 +12,7 @@ $colors: (
   "accent": #ff3400,
   "headings": #1b0760,
   "body": #918ca4,
+  "body-darker": #5c5577,
   "border": #ccc,
 );
 
@@ -401,5 +402,57 @@ a {
 
   &__title {
     margin-top: 0;
+  }
+}
+
+// QUOTES
+
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: map-get($colors, body-darker);
+  line-height: 1.3;
+
+  &__text {
+    margin-bottom: 3rem;
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+  }
+
+  &__author {
+    font-size: 3rem;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0;
+  }
+
+  &__organization {
+    color: map-get($colors, headings);
+    opacity: 0.4;
+    font-size: 2rem;
+    font-style: normal;
+  }
+
+  &__line {
+    position: relative;
+    bottom: 10px;
+  }
+
+  @include media-min-width(1024px) {
+    & {
+      font-size: 2rem;
+    }
+
+    &__author {
+      font-size: 2.4rem;
+    }
+
+    &__organization {
+      font-size: 1.6rem;
+    }
   }
 }

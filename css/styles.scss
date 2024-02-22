@@ -456,3 +456,21 @@ a {
     }
   }
 }
+
+// GRIDS
+
+.grid {
+  display: grid;
+
+  @include media-min-width(768px) {
+    &--cols-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include media-min-width(1024px) {
+    &--cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

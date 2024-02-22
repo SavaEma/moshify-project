@@ -467,4 +467,34 @@ a {
   opacity: 1;
 }
 
+.block {
+  padding: 6rem 2rem;
+}
+.block__header {
+  text-align: center;
+}
+.block__heading {
+  margin-top: 0;
+}
+.block--dark {
+  background-color: #000;
+  color: #7b858b;
+}
+.block--dark .block__heading {
+  color: #fff;
+}
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 80%);
+  padding-bottom: 10rem;
+}
+.block--skewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 98%);
+  padding-bottom: 10rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

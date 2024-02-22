@@ -14,43 +14,24 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <section class="block container">
-      <header class="block__header">
-        <h2 class="block__heading">Heading</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-          minus.
-        </p>
-      </header>
-      <div style="width: 30%; padding: 3rem">
-        <div class="card card--primary">
-          <header class="card__header">Card title</header>
-          <div class="card__body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex
-            exercitationem sequi nisi itaque dolorum magni praesentium pariatur
-            recusandae ab. Quisquam.
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="block block--dark block--skewed-right">
-      <div class="container">
-        <h2 class="block__heading">Heading</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-          minus.
-        </p>
-      </div>
-    </section>
-    <section class="block block--dark block--skewed-left">
-      <div class="container">
-        <h2 class="block__heading">Heading</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-          minus.
-        </p>
-      </div>
-    </section>
+    <nav class="nav collapsible">
+      <a href="/">
+        <img
+          class="nav__brand"
+          src="images/logo.png"
+          alt="The logo of the website"
+        />
+      </a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Hosting</a></li>
+        <li class="nav__item"><a href="#">VPS</a></li>
+        <li class="nav__item"><a href="#">Domain</a></li>
+        <li class="nav__item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
     <script src="js/main.js"></script>
   </body>
 </html>

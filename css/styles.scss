@@ -183,10 +183,23 @@ a {
     height: 64px;
     border-radius: 50%;
     background-color: #f3f9fa;
+
+    &--accent {
+      background-color: map-get($colors, accent);
+    }
   }
 
   &--primary {
     fill: map-get($colors, primary);
+  }
+
+  &--white {
+    fill: #fff;
+  }
+
+  &--small {
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -471,6 +484,40 @@ a {
   @include media-min-width(1024px) {
     &--cols-3 {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// TESTIMONIALS
+
+.testimonial {
+  padding: 7rem;
+
+  &__image {
+    position: relative;
+
+    & > img {
+      width: 100%;
+    }
+
+    & > .icon-container {
+      position: absolute;
+      top: 3rem;
+      right: -32px;
+    }
+  }
+
+  @include media-min-width(768px) {
+    & {
+      padding: 3rem;
+    }
+    & .quote {
+      font-size: 2.4rem;
+      margin-left: 6rem;
+
+      &__author {
+        font-size: 2.4rem;
+      }
     }
   }
 }

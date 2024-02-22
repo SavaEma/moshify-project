@@ -140,8 +140,18 @@ a {
   border-radius: 50%;
   background-color: #f3f9fa;
 }
+.icon-container--accent {
+  background-color: #ff3400;
+}
 .icon--primary {
   fill: #2584ff;
+}
+.icon--white {
+  fill: #fff;
+}
+.icon--small {
+  width: 30px;
+  height: 30px;
 }
 
 .btn {
@@ -364,6 +374,33 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--cols-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial {
+  padding: 7rem;
+}
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > img {
+  width: 100%;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+@media screen and (min-width: 768px) {
+  .testimonial {
+    padding: 3rem;
+  }
+  .testimonial .quote {
+    font-size: 2.4rem;
+    margin-left: 6rem;
+  }
+  .testimonial .quote__author {
+    font-size: 2.4rem;
   }
 }
 

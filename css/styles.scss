@@ -260,6 +260,11 @@ a {
     display: inline-block;
   }
 
+  &--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
   @include media-min-width(1024px) {
     & {
       font-size: 1.5rem;
@@ -518,6 +523,48 @@ a {
       &__author {
         font-size: 2.4rem;
       }
+    }
+  }
+}
+
+// CALLOUTS
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__heading {
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+  }
+
+  & .btn {
+    align-self: center;
+    justify-self: center;
+  }
+
+  &--primary {
+    background-color: map-get($colors, primary);
+    color: #fff;
+  }
+
+  @include media-min-width(768px) {
+    & .grid--cols-2 {
+      grid-template-columns: 1fr auto;
+    }
+
+    &__content {
+      text-align: left;
+    }
+
+    & .btn {
+      justify-self: start;
+      margin: 0 2rem;
     }
   }
 }

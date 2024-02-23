@@ -333,6 +333,10 @@ a {
     .card__header {
       background-color: map-get($colors, primary);
       color: #fff;
+
+      & .badge--primary {
+        background-color: darken(map-get($colors, primary), 7%);
+      }
     }
   }
 
@@ -350,6 +354,8 @@ a {
 // PLANS
 
 .plan {
+  transition: transform 0.2s ease-out;
+
   &__name {
     color: #fff;
     margin: 0;
@@ -379,7 +385,13 @@ a {
     margin-bottom: 2rem;
   }
 
+  &:hover {
+    transform: scale(1.05);
+  }
+
   &--popular {
+    transform: scale(1.1);
+
     & .card__header {
       position: relative;
     }
@@ -391,6 +403,10 @@ a {
       position: absolute;
       top: -6px;
       right: 5%;
+    }
+
+    &:hover {
+      transform: scale(1.15);
     }
   }
 
@@ -770,5 +786,18 @@ a {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
       }
     }
+  }
+}
+
+// PLANS BLOCK
+
+.block-plans {
+  .grid {
+    gap: 8rem 4rem;
+  }
+
+  .card {
+    max-width: 500px;
+    margin: 0 auto;
   }
 }

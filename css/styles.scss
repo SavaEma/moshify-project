@@ -40,6 +40,7 @@ h2,
 h3 {
   color: map-get($colors, headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -705,6 +706,34 @@ a {
 
     &__item {
       border: 0;
+    }
+  }
+}
+
+// HERO
+
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 98%);
+
+  &__tagline {
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin: 2rem 0 5rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  @include media-min-width(768px) {
+    & {
+      padding-top: 0;
+    }
+
+    &__content {
+      text-align: left;
+      align-self: center;
     }
   }
 }

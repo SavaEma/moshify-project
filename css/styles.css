@@ -239,7 +239,7 @@ a {
   font-size: 2rem;
 }
 .input ::placeholder {
-  color: cdcbd7;
+  color: #cdcbd7;
 }
 @media screen and (min-width: 1024px) {
   .input {

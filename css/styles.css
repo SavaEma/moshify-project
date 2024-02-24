@@ -1,3 +1,4 @@
+@import "./normalize.css";
 *,
 *::before,
 *::after {
@@ -13,10 +14,14 @@ html {
   font-size: 62.5%;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   font-family: "Inter", Arial, Arial, Helvetica, sans-serif;
   color: #918ca4;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -29,7 +34,7 @@ h3 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -37,8 +42,9 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 p {
@@ -68,11 +74,11 @@ a {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
-  transition: margin 0.15s;
 }
 .link-arrow::after {
   content: "-->";
   margin-left: 5px;
+  transition: margin 0.15s;
 }
 .link-arrow:hover::after {
   margin-left: 10px;
@@ -168,7 +174,7 @@ a {
   font-weight: 600;
   font-size: 1.8rem;
   text-align: center;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   margin: 1rem 0;
   cursor: pointer;
   white-space: nowrap;
@@ -249,6 +255,7 @@ a {
 .input-group .input {
   border: none;
   flex-grow: 1;
+  width: 0;
   padding: 1.5rem 2rem;
 }
 .input-group .btn {
@@ -261,7 +268,7 @@ a {
   overflow: hidden;
 }
 .card__header, .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 7%;
 }
 .card--primary .card__header {
   background-color: #2584ff;
@@ -288,10 +295,10 @@ a {
   font-size: 2.4rem;
 }
 .plan__price {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 .plan__billing-cycle {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 300;
   opacity: 0.8;
   margin-right: 1rem;
@@ -378,7 +385,7 @@ a {
 .quote__organization {
   color: #1b0760;
   opacity: 0.4;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
 }
 .quote__line {
@@ -412,13 +419,15 @@ a {
 }
 
 .testimonial {
-  padding: 7rem;
+  padding: 3rem;
+}
+.testimonial .quote {
+  margin: 2rem 0;
+  font-size: 110%;
 }
 .testimonial__image {
   position: relative;
-}
-.testimonial__image > img {
-  width: 100%;
+  margin: 0 3rem;
 }
 .testimonial__image > .icon-container {
   position: absolute;
@@ -426,15 +435,13 @@ a {
   right: -32px;
 }
 @media screen and (min-width: 768px) {
-  .testimonial {
-    padding: 3rem;
+  .testimonial__image {
+    margin: 0;
   }
   .testimonial .quote {
-    font-size: 2.4rem;
-    margin-left: 6rem;
-  }
-  .testimonial .quote__author {
-    font-size: 2.4rem;
+    margin: 5rem 0 0 6rem;
+    font-size: 120%;
+    line-height: 1.5;
   }
 }
 
@@ -493,12 +500,12 @@ a {
   transform: rotate(0);
 }
 .collapsible--expanded .collapsible__content {
-  max-height: 100vh;
+  max-height: 100%;
   opacity: 1;
 }
 
 .block {
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
 }
 .block__header {
   text-align: center;
@@ -515,12 +522,12 @@ a {
   color: #fff;
 }
 .block--skewed-right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 90%);
-  padding-bottom: 10rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 95%);
+  padding-bottom: 9rem;
 }
 .block--skewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 98%);
-  padding-bottom: 10rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 98%);
+  padding-bottom: 9rem;
 }
 
 .container {
@@ -534,10 +541,11 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .nav__brand {
   transform: translateY(5px);
+  width: 150px;
 }
 .nav__list {
   width: 100%;
@@ -546,6 +554,9 @@ a {
 .nav__item {
   padding: 0.5rem 2rem;
   border-bottom: 1px solid #222;
+}
+.nav__item:last-of-type {
+  border-bottom: none;
 }
 .nav__item > a {
   color: #d2d0db;
@@ -586,16 +597,15 @@ a {
   letter-spacing: 1px;
   margin: 2rem 0 5rem;
 }
-.hero__image {
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
-  .hero {
-    padding-top: 0;
-  }
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 0;
   }
 }
 
@@ -606,8 +616,9 @@ a {
   max-width: 670px;
 }
 .block-domain__prices {
+  color: #1b0760;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   font-size: 2rem;
@@ -639,19 +650,12 @@ a {
 .feature__heading {
   margin: 1rem 0;
 }
-.feature__image {
-  width: 100%;
-  align-self: center;
-}
 @media screen and (min-width: 768px) {
   .feature:nth-last-of-type(even) .feature__content {
     order: 2;
   }
 }
 
-.block-showcase__image > img {
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
   .block-showcase .grid {
     grid-template-columns: 50% 50%;
@@ -667,13 +671,14 @@ a {
 
 .footer {
   background-color: #232323;
+  padding-top: 10rem;
 }
 .footer a {
   color: #777;
+  transition: color 0.3s;
 }
 .footer a:hover {
   color: #fff;
-  transition: color 0.3s;
 }
 .footer__section {
   padding: 2rem;
@@ -685,13 +690,14 @@ a {
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
 }
 .footer__brand {
   margin-top: 5rem;
   text-align: center;
 }
 .footer__brand img {
-  width: 100%;
   max-width: 230px;
 }
 .footer__copyright {
@@ -700,6 +706,9 @@ a {
   opacity: 0.3;
 }
 @media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
@@ -709,14 +718,13 @@ a {
   .footer .collapsible__content {
     opacity: 1;
     max-height: 100%;
-    font-size: 1.6rem;
   }
   .footer__brand {
     order: -1;
     margin-top: 1rem;
   }
   .footer__copyright {
-    font-size: 1.5;
+    font-size: 1.5rem;
   }
   .footer__section {
     border: 0;
@@ -724,6 +732,10 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+.callout-signup {
+  transform: translateY(5rem);
 }
 
 /*# sourceMappingURL=styles.css.map */

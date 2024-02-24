@@ -24,6 +24,11 @@ $colors: (
 
 //  TYPOGRAPHY
 
+::selection {
+  background-color: map-get($colors, primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -53,6 +58,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -146,7 +152,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: map-get($colors, headings);
 
   &--inline &__item {
     display: inline-block;
@@ -156,6 +161,7 @@ a {
   &--tick {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color: map-get($colors, headings);
   }
 
   &--tick &__item {
@@ -433,6 +439,7 @@ a {
 
 .media {
   display: flex;
+  margin-bottom: 4rem;
 
   &__image {
     margin-top: 1rem;
@@ -648,17 +655,19 @@ a {
     background-color: #000;
     color: #7b858b;
 
-    & .block__heading {
+    & h1,
+    & h2,
+    & h3 {
       color: #fff;
     }
   }
 
   &--skewed-right {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 90%);
     padding-bottom: calc($padding-vertical + 4rem);
   }
   &--skewed-left {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 98%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 98%);
     padding-bottom: calc($padding-vertical + 4rem);
   }
 }
@@ -736,8 +745,6 @@ a {
 // HERO
 
 .hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 98%);
-
   &__tagline {
     font-size: 2rem;
     color: #b9c3cf;
@@ -824,6 +831,29 @@ a {
   @include media-min-width(768px) {
     &:nth-last-of-type(even) &__content {
       order: 2;
+    }
+  }
+}
+
+// SHOWCASE BLOCK
+
+.block-showcase {
+  &__image > img {
+    width: 100%;
+  }
+
+  @include media-min-width(768px) {
+    & .grid {
+      grid-template-columns: 50% 50%;
+    }
+
+    &__image {
+      justify-self: end;
+
+      & > img {
+        width: auto;
+        max-width: 700px;
+      }
     }
   }
 }

@@ -1,1 +1,1 @@
-This website was built aster taking the Mosh Hamdeani's course for HTML&CSS.
+This website was built after taking the Mosh Hamdeani's course for HTML&CSS.
